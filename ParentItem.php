@@ -88,7 +88,7 @@ class ParentItem extends ReportBuilder
             $this->$arg = $this->validateString($$arg);
         }
         if (!in_array($itemDataType, $this->getItemDataTypes())) {
-            throw new \Exception('Invalid type: ' . $type);
+            throw new \Exception('Invalid type: ' . $itemDataType);
         }
         $this->itemIdentifier = $this->validateZeroOrMoreOf($itemIdentifiers, 'Identifier');
         $this->itemContributor = $this->validateZeroOrMoreOf($itemContributors, 'ItemContributor');

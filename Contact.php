@@ -95,7 +95,7 @@ class Contact extends ReportBuilder
                 }
             } elseif (count(array_keys($array)) == 1 && !parent::isAssociative($array)) {
                 // Loosely array with a name or email
-                if (filter_var($k, FILTER_VALIDATE_EMAIL)) {
+                if (filter_var($array[0], FILTER_VALIDATE_EMAIL)) {
                     // email
                     return new self('', $array[0]);
                 }

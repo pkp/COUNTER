@@ -226,7 +226,7 @@ class ReportBuilder
      *
      * @return mixed object or array of objects
      */
-    protected function buildMultiple($classname, $array)
+    protected static function buildMultiple($classname, $array)
     {
         if (!is_array($array)) {
             return [];
