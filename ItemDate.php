@@ -45,7 +45,7 @@ class ItemDate extends ReportBuilder
      */
     private $type;
     /**
-     * @var string ItemDate element "Value"
+     * @var \DateTime ItemDate element "Value"
      */
     private $value;
 
@@ -53,9 +53,9 @@ class ItemDate extends ReportBuilder
      * Construct the object
      *
      * @param string $type
-     * @param string $value
+     * @param \DateTime $value
      *
-     * @throws Exception
+     * @throws \Exception
      */
     public function __construct($type, $value)
     {
@@ -71,9 +71,9 @@ class ItemDate extends ReportBuilder
      *
      * @param array $array Hash of key-values
      *
-     * @throws Exception
+     * @throws \Exception
      *
-     * @return \self
+     * @return self
      */
     public static function build($array)
     {
@@ -95,7 +95,7 @@ class ItemDate extends ReportBuilder
     /**
      * Output this object as a DOMDocument
      *
-     * @return DOMDocument
+     * @return \DOMDocument
      */
     public function asDOMDocument()
     {

@@ -67,9 +67,9 @@ class Consortium extends ReportBuilder
      *
      * @param array $array Hash of key-values
      *
-     * @throws Exception
+     * @throws \Exception
      *
-     * @return \self
+     * @return self
      */
     public static function build($array)
     {
@@ -97,7 +97,7 @@ class Consortium extends ReportBuilder
     /**
      * Output this object as a DOMDocument
      *
-     * @return DOMDocument
+     * @return \DOMDocument
      */
     public function asDOMDocument()
     {

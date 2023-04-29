@@ -55,7 +55,7 @@ class ItemAttribute extends ReportBuilder
      * @param string $type
      * @param string $value
      *
-     * @throws Exception
+     * @throws \Exception
      */
     public function __construct($type, $value)
     {
@@ -72,9 +72,9 @@ class ItemAttribute extends ReportBuilder
      *
      * @param array $array Hash of key-values
      *
-     * @throws Exception
+     * @throws \Exception
      *
-     * @return \self
+     * @return self
      */
     public static function build($array)
     {
@@ -96,7 +96,7 @@ class ItemAttribute extends ReportBuilder
     /**
      * Output this object as a DOMDocument
      *
-     * @return DOMDocument
+     * @return \DOMDocument
      */
     public function asDOMDocument()
     {

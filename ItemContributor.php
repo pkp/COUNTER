@@ -41,7 +41,7 @@ namespace COUNTER;
 class ItemContributor extends ReportBuilder
 {
     /**
-     * @var array zero or more COUNTER\ItemContributorID elements
+     * @var ItemContributorId[] zero or more COUNTER\ItemContributorId elements
      */
     private $itemContributorId;
     /**
@@ -49,23 +49,23 @@ class ItemContributor extends ReportBuilder
      */
     private $itemContributorName;
     /**
-     * @var string ItemContributor element "Affiliation"
+     * @var string[] ItemContributor element "Affiliation"
      */
     private $itemContributorAffiliation;
     /**
-     * @var string ItemContributor element "Role"
+     * @var string[] ItemContributor element "Role"
      */
     private $itemContributorRole;
 
     /**
      * Construct the object
      *
-     * @param array $itemContributorIds optional COUNTER\ContributorId array
+     * @param ContributorId[] $itemContributorIds optional COUNTER\ContributorId array
      * @param string $itemContributorName optional
-     * @param array $itemContributorAffiliations optional string array
-     * @param array $itemContributorRoles optional string array
+     * @param string[] $itemContributorAffiliations optional string array
+     * @param string[] $itemContributorRoles optional string array
      *
-     * @throws Exception
+     * @throws \Exception
      */
     public function __construct($itemContributorIds = [], $itemContributorName = '', $itemContributorAffiliations = [], $itemContributorRoles = [])
     {
@@ -80,9 +80,9 @@ class ItemContributor extends ReportBuilder
      *
      * @param array $array Hash of key-values
      *
-     * @throws Exception
+     * @throws \Exception
      *
-     * @return \self
+     * @return self
      */
     public static function build($array)
     {
@@ -104,7 +104,7 @@ class ItemContributor extends ReportBuilder
     /**
      * Output this object as a DOMDocument
      *
-     * @return DOMDocument
+     * @return \DOMDocument
      */
     public function asDOMDocument()
     {

@@ -51,7 +51,7 @@ class ReportBuilder
      * @param object $object
      * @param string $className If no namespace specified, defaults to the COUNTER namespace
      *
-     * @throws Exception
+     * @throws \Exception
      *
      * @return object
      */
@@ -91,10 +91,10 @@ class ReportBuilder
     /**
      * Validate that $objects is an array of $className instances.  If valid, return the array, otherwise, throw an exception
      *
-     * @param object $objects
+     * @param object|array $objects
      * @param string $className
      *
-     * @throws Exception
+     * @throws \Exception
      *
      * @return array
      */
@@ -112,10 +112,10 @@ class ReportBuilder
     /**
      * Validate that $objects is an array of $className instances, or is empty.  If valid, return the array or empty, otherwise, throw an exception
      *
-     * @param object $objects
+     * @param object|array $objects
      * @param string $className
      *
-     * @throws Exception
+     * @throws \Exception
      *
      * @return array
      */
@@ -133,7 +133,7 @@ class ReportBuilder
      * @param object $object
      * @param string $className
      *
-     * @throws Exception
+     * @throws \Exception
      *
      * @return object
      */
@@ -150,7 +150,7 @@ class ReportBuilder
      *
      * @param int $int
      *
-     * @throws Exception
+     * @throws \Exception
      *
      * @return int
      */
@@ -168,7 +168,7 @@ class ReportBuilder
      *
      * @param string $string
      *
-     * @throws Exception
+     * @throws \Exception
      *
      * @return string
      */
@@ -185,7 +185,7 @@ class ReportBuilder
      *
      * @param array $array
      *
-     * @throws Exception
+     * @throws \Exception
      *
      * @return array
      */
@@ -334,7 +334,7 @@ class ReportBuilder
      * Do NOT Output this object as a DOMDocument
      * This method must be implemented in the subclass
      *
-     * @throws Exception
+     * @throws \Exception
      */
     public function asDOMDocument()
     {
@@ -346,7 +346,9 @@ class ReportBuilder
      * This method must be implemented in the subclass
      * Subclasses should call this method if unable to build the object in order to report an error.
      *
-     * @throws Exception
+     * @throws \Exception
+     *
+     * @return never
      */
     public static function build($array)
     {

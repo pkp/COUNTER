@@ -42,16 +42,16 @@ namespace COUNTER;
 class Reports extends ReportBuilder
 {
     /**
-     * @var array one or more COUNTER\Report objects
+     * @var Report[] one or more COUNTER\Report objects
      */
     private $report = [];
 
     /**
      * Construct the object
      *
-     * @param array $reports COUNTER\Report array
+     * @param Report[] $reports COUNTER\Report array
      *
-     * @throws Exception
+     * @throws \Exception
      */
     public function __construct($reports)
     {
@@ -63,9 +63,9 @@ class Reports extends ReportBuilder
      *
      * @param array $array Hash of key-values
      *
-     * @throws Exception
+     * @throws \Exception
      *
-     * @return \self
+     * @return self
      */
     public static function build($array)
     {
@@ -87,9 +87,9 @@ class Reports extends ReportBuilder
     /**
      * Add a report
      *
-     * @param object $report CounterReport
+     * @param Report $report CounterReport
      *
-     * @throws Exception
+     * @throws \Exception
      */
     public function addReport($report)
     {
@@ -99,7 +99,7 @@ class Reports extends ReportBuilder
     /**
      * Get an array of reports
      *
-     * @return array COUNTER\Report array
+     * @return Report[] COUNTER\Report array
      */
     public function getReports()
     {
@@ -109,7 +109,7 @@ class Reports extends ReportBuilder
     /**
      * Output this object as a DOMDocument
      *
-     * @return DOMDocument
+     * @return \DOMDocument
      */
     public function asDOMDocument()
     {

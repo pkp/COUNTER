@@ -49,7 +49,7 @@ class Customer extends ReportBuilder
      */
     private $id;
     /**
-     * @var array zero or more COUNTER\Contact elements
+     * @var Contact[] zero or more COUNTER\Contact elements
      */
     private $contact;
     /**
@@ -61,15 +61,15 @@ class Customer extends ReportBuilder
      */
     private $logoUrl;
     /**
-     * @var string Customer element "Consortium"
+     * @var Consortium Customer element "Consortium"
      */
     private $consortium;
     /**
-     * @var array zero or more COUNTER\Identifier elements
+     * @var Identifier[] zero or more COUNTER\Identifier elements
      */
     private $institutionalIdentifier;
     /**
-     * @var array one or more COUNTER\ReportItem elements
+     * @var ReportItems[] one or more COUNTER\ReportItems elements
      */
     private $reportItems;
 
@@ -77,15 +77,15 @@ class Customer extends ReportBuilder
      * Construct the object
      *
      * @param string $id
-     * @param array $reportItems COUNTER\ReportItems array
+     * @param ReportItems[] $reportItems COUNTER\ReportItems array
      * @param string $name optional
-     * @param array $contacts optional COUNTER\Contacts array
+     * @param Contacts[] $contacts optional COUNTER\Contacts array
      * @param string $webSiteUrl optional
      * @param string $logoUrl optional
-     * @param object $consortium optional COUNTER\Consortium
-     * @param array $institutionalIdentifier optional COUNTER\Identifier array
+     * @param Consortium $consortium optional COUNTER\Consortium
+     * @param Identifier[] $institutionalIdentifier optional COUNTER\Identifier array
      *
-     * @throws Exception
+     * @throws \Exception
      */
     public function __construct($id, $reportItems, $name = '', $contacts = [], $webSiteUrl = '', $logoUrl = '', $consortium = null, $institutionalIdentifier = [])
     {
@@ -103,9 +103,9 @@ class Customer extends ReportBuilder
      *
      * @param array $array Hash of key-values
      *
-     * @throws Exception
+     * @throws \Exception
      *
-     * @return \self
+     * @return self
      */
     public static function build($array)
     {
@@ -133,7 +133,7 @@ class Customer extends ReportBuilder
     /**
      * Output this object as a DOMDocument
      *
-     * @return DOMDocument
+     * @return \DOMDocument
      */
     public function asDOMDocument()
     {

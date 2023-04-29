@@ -49,7 +49,7 @@ class Vendor extends ReportBuilder
      */
     private $id;
     /**
-     * @var array zero or more COUNTER\Contact elements
+     * @var Contact[] zero or more COUNTER\Contact elements
      */
     private $contact = [];
     /**
@@ -66,11 +66,11 @@ class Vendor extends ReportBuilder
      *
      * @param string $id
      * @param string $name optional
-     * @param array $contacts optional COUNTER\Contact array
+     * @param Contact[] $contacts optional COUNTER\Contact array
      * @param string $webSiteUrl optional
      * @param string $logoUrl optional
      *
-     * @throws Exception
+     * @throws \Exception
      */
     public function __construct($id, $name = '', $contacts = [], $webSiteUrl = '', $logoUrl = '')
     {
@@ -85,9 +85,9 @@ class Vendor extends ReportBuilder
      *
      * @param array $array Hash of key-values
      *
-     * @throws Exception
+     * @throws \Exception
      *
-     * @return \self
+     * @return self
      */
     public static function build($array)
     {
@@ -110,7 +110,7 @@ class Vendor extends ReportBuilder
     /**
      * Output this object as a DOMDocument
      *
-     * @return DOMDocument
+     * @return \DOMDocument
      */
     public function asDOMDocument()
     {

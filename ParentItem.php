@@ -41,19 +41,19 @@ namespace COUNTER;
 class ParentItem extends ReportBuilder
 {
     /**
-     * @var array zero or more COUNTER\Identifier elements
+     * @var Identifier[] zero or more COUNTER\Identifier elements
      */
     private $itemIdentifier;
     /**
-     * @var array zero or more COUNTER\ItemContributor elements
+     * @var ItemContributor[] zero or more COUNTER\ItemContributor elements
      */
     private $itemContributor;
     /**
-     * @var array zero or more COUNTER\ItemDate elements
+     * @var ItemDate[] zero or more COUNTER\ItemDate elements
      */
     private $itemDate;
     /**
-     * @var array zero or more COUNTER\ItemAttribute elements
+     * @var ItemAttribute[] zero or more COUNTER\ItemAttribute elements
      */
     private $itemAttribute;
     /**
@@ -65,7 +65,7 @@ class ParentItem extends ReportBuilder
      */
     private $itemName;
     /**
-     * @var COUNTER\DataType ParentItem element "ItemDataType"
+     * @var string ParentItem element "ItemDataType"
      */
     private $itemDataType;
 
@@ -74,13 +74,13 @@ class ParentItem extends ReportBuilder
      *
      * @param string $itemName
      * @param string $itemDataType
-     * @param array $itemIdentifiers optional COUNTER\Identifier array
-     * @param array $itemContributors optional COUNTER\ItemContributor array
-     * @param array $itemDates optional COUNTER\ItemDate array
-     * @param array $itemAttributes optional COUNTER\ItemAttribute array
+     * @param Identifier[] $itemIdentifiers optional COUNTER\Identifier array
+     * @param ItemContributor[] $itemContributors optional COUNTER\ItemContributor array
+     * @param ItemDate[] $itemDates optional COUNTER\ItemDate array
+     * @param ItemAttribute[] $itemAttributes optional COUNTER\ItemAttribute array
      * @param string $itemPublisher optional
      *
-     * @throws Exception
+     * @throws \Exception
      */
     public function __construct($itemName, $itemDataType, $itemIdentifiers = [], $itemContributors = [], $itemDates = [], $itemAttributes = [], $itemPublisher = '')
     {
@@ -101,9 +101,9 @@ class ParentItem extends ReportBuilder
      *
      * @param array $array Hash of key-values
      *
-     * @throws Exception
+     * @throws \Exception
      *
-     * @return \self
+     * @return self
      */
     public static function build($array)
     {
@@ -131,7 +131,7 @@ class ParentItem extends ReportBuilder
     /**
      * Output this object as a DOMDocument
      *
-     * @return DOMDocument
+     * @return \DOMDocument
      */
     public function asDOMDocument()
     {

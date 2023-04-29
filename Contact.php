@@ -55,7 +55,7 @@ class Contact extends ReportBuilder
      * @param string $contact optional
      * @param string $email optional
      *
-     * @throws Exception
+     * @throws \Exception
      */
     public function __construct($contact = '', $email = '')
     {
@@ -69,9 +69,9 @@ class Contact extends ReportBuilder
      *
      * @param array $array Hash of key-values
      *
-     * @throws Exception
+     * @throws \Exception
      *
-     * @return \self
+     * @return self
      */
     public static function build($array)
     {
@@ -117,7 +117,7 @@ class Contact extends ReportBuilder
     /**
      * Output this object as a DOMDocument
      *
-     * @return DOMDocument
+     * @return \DOMDocument
      */
     public function asDOMDocument()
     {

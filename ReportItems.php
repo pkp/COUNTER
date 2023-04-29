@@ -41,23 +41,23 @@ namespace COUNTER;
 class ReportItems extends ReportBuilder
 {
     /**
-     * @var COUNTER\ParentItem ReportItem element "ParentItem"
+     * @var ParentItem ReportItem element "ParentItem"
      */
     private $parentItem;
     /**
-     * @var array zero or more COUNTER\Identifier elements
+     * @var Identifier[] zero or more COUNTER\Identifier elements
      */
     private $itemIdentifier;
     /**
-     * @var array zero or more COUNTER\ItemContributor elements
+     * @var ItemContributor[] zero or more COUNTER\ItemContributor elements
      */
     private $itemContributor;
     /**
-     * @var array zero or more COUNTER\ItemDate elements
+     * @var ItemDate[] zero or more COUNTER\ItemDate elements
      */
     private $itemDate;
     /**
-     * @var array zero or more COUNTER\ItemAttribute elements
+     * @var ItemAttribute[] zero or more COUNTER\ItemAttribute elements
      */
     private $itemAttribute;
     /**
@@ -73,11 +73,11 @@ class ReportItems extends ReportBuilder
      */
     private $itemName;
     /**
-     * @var COUNTER\ItemDataType ReportItem element "ItemData"
+     * @var string ReportItem element "ItemData"
      */
     private $itemDataType;
     /**
-     * @var array one or more COUNTER\Metric elements
+     * @var Metric[] one or more COUNTER\Metric elements
      */
     private $itemPerformance;
 
@@ -87,15 +87,15 @@ class ReportItems extends ReportBuilder
      * @param string $itemPlatform
      * @param string $itemName
      * @param string $itemDataType
-     * @param array $itemPerformance COUNTER\Metric array
-     * @param object $parentItem optional COUNTER\ParentItem
-     * @param array $itemIdentifiers optional COUNTER\Identifier array
-     * @param array $itemContributors optional COUNTER\Contributor array
-     * @param array $itemDates optional COUNTER\Date array
-     * @param array $itemAttributes optional COUNTER\ItemAttribute array
+     * @param Metric[] $itemPerformance COUNTER\Metric array
+     * @param ParentItem $parentItem optional COUNTER\ParentItem
+     * @param Identifier[] $itemIdentifiers optional COUNTER\Identifier array
+     * @param ItemContributor[] $itemContributors optional COUNTER\ItemContributor array
+     * @param ItemDate[] $itemDates optional COUNTER\ItemDate array
+     * @param ItemAttribute[] $itemAttributes optional COUNTER\ItemAttribute array
      * @param string $itemPublisher optional
      *
-     * @throws Exception
+     * @throws \Exception
      */
     public function __construct($itemPlatform, $itemName, $itemDataType, $itemPerformance, $parentItem = null, $itemIdentifiers = [], $itemContributors = [], $itemDates = [], $itemAttributes = [], $itemPublisher = '')
     {
@@ -118,9 +118,9 @@ class ReportItems extends ReportBuilder
      *
      * @param array $array Hash of key-values
      *
-     * @throws Exception
+     * @throws \Exception
      *
-     * @return \self
+     * @return self
      */
     public static function build($array)
     {
@@ -152,7 +152,7 @@ class ReportItems extends ReportBuilder
     /**
      * Output this object as a DOMDocument
      *
-     * @return DOMDocument
+     * @return \DOMDocument
      */
     public function asDOMDocument()
     {

@@ -41,7 +41,7 @@ namespace COUNTER;
 class PerformanceCounter extends ReportBuilder
 {
     /**
-     * @var COUNTER\MetricType PerformanceCounter element "MetricType"
+     * @var string PerformanceCounter element "MetricType"
      */
     private $metricType;
     /**
@@ -55,7 +55,7 @@ class PerformanceCounter extends ReportBuilder
      * @param string $metricType
      * @param int $count
      *
-     * @throws Exception
+     * @throws \Exception
      */
     public function __construct($metricType, $count)
     {
@@ -71,9 +71,9 @@ class PerformanceCounter extends ReportBuilder
      *
      * @param array $array Hash of key-values
      *
-     * @throws Exception
+     * @throws \Exception
      *
-     * @return \self
+     * @return self
      */
     public static function build($array)
     {
@@ -95,7 +95,7 @@ class PerformanceCounter extends ReportBuilder
     /**
      * Output this object as a DOMDocument
      *
-     * @return DOMDocument
+     * @return \DOMDocument
      */
     public function asDOMDocument()
     {

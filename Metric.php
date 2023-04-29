@@ -53,23 +53,23 @@ class Metric extends ReportBuilder
      */
     private $pubYrTo;
     /**
-     * @var COUNTER\DateRange Metric element "Period"
+     * @var DateRange Metric element "Period"
      */
     private $period;
     /**
-     * @var COUNTER\Category Metric element "Category"
+     * @var string Metric element "Category"
      */
     private $category;
     /**
-     * @var array one or more COUNTER\PerformanceCounter elements
+     * @var PerformanceCounter[] one or more COUNTER\PerformanceCounter elements
      */
     private $instance;
 
     /**
      * Construct the object
      *
-     * @param array $period COUNTER\DateRange array
-     * @param array $category COUNTER\Category array
+     * @param DateRange $period COUNTER\DateRange array
+     * @param string $category COUNTER\Category array
      * @param array $instances COUNTER\PerformanceCounter array
      * @param int $pubYrFrom optional
      * @param int $pubYrTo optional
@@ -78,7 +78,7 @@ class Metric extends ReportBuilder
      * @param null|mixed $pubYrTo
      * @param null|mixed $pubYr
      *
-     * @throws Exception
+     * @throws \Exception
      */
     public function __construct($period, $category, $instances, $pubYrFrom = null, $pubYrTo = null, $pubYr = null)
     {
@@ -104,9 +104,9 @@ class Metric extends ReportBuilder
      *
      * @param array $array Hash of key-values
      *
-     * @throws Exception
+     * @throws \Exception
      *
-     * @return \self
+     * @return self
      */
     public static function build($array)
     {
@@ -130,7 +130,7 @@ class Metric extends ReportBuilder
     /**
      * Output this object as a DOMDocument
      *
-     * @return DOMDocument
+     * @return \DOMDocument
      */
     public function asDOMDocument()
     {

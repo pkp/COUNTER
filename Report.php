@@ -61,11 +61,11 @@ class Report extends ReportBuilder
      */
     private $title;
     /**
-     * @var COUNTER\Vendor
+     * @var Vendor
      */
     private $vendor;
     /**
-     * @var array one or more COUNTER\Customer objects
+     * @var Customer[] one or more COUNTER\Customer objects
      */
     private $customer;
 
@@ -76,11 +76,11 @@ class Report extends ReportBuilder
      * @param string $version
      * @param string $name
      * @param string $title
-     * @param string $customers COUNTER\Customer
-     * @param object $vendor COUNTER\Vendor array
+     * @param Customer $customers COUNTER\Customer
+     * @param Vendor $vendor COUNTER\Vendor
      * @param string $created optional
      *
-     * @throws Exception
+     * @throws \Exception
      */
     public function __construct($id, $version, $name, $title, $customers, $vendor, $created = '')
     {
@@ -99,9 +99,9 @@ class Report extends ReportBuilder
      *
      * @param array $array Hash of key-values
      *
-     * @throws Exception
+     * @throws \Exception
      *
-     * @return \self
+     * @return self
      */
     public static function build($array)
     {
@@ -126,7 +126,7 @@ class Report extends ReportBuilder
     /**
      * Output this object as a DOMDocument
      *
-     * @return DOMDocument
+     * @return \DOMDocument
      */
     public function asDOMDocument()
     {

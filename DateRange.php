@@ -52,10 +52,10 @@ class DateRange extends ReportBuilder
     /**
      * Construct the object
      *
-     * @param DateTime $begin
-     * @param DateTime $end
+     * @param \DateTime $begin
+     * @param \DateTime $end
      *
-     * @throws Exception
+     * @throws \Exception
      */
     public function __construct($begin, $end)
     {
@@ -68,9 +68,9 @@ class DateRange extends ReportBuilder
      *
      * @param array $array Hash of key-values
      *
-     * @throws Exception
+     * @throws \Exception
      *
-     * @return \self
+     * @return self
      */
     public static function build($array)
     {
@@ -90,7 +90,7 @@ class DateRange extends ReportBuilder
     /**
      * Output this object as a DOMDocument
      *
-     * @return DOMDocument
+     * @return \DOMDocument
      */
     public function asDOMDocument()
     {
