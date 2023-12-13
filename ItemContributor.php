@@ -108,7 +108,7 @@ class ItemContributor extends ReportBuilder
      */
     public function asDOMDocument()
     {
-        $doc = new \DOMDocument();
+        $doc = new \DOMDocument('1.0', 'utf-8');
         $root = $doc->appendChild($doc->createElement('ItemContributor'));
         if ($this->itemContributorId) {
             foreach ($this->itemContributorId as $id) {

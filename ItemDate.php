@@ -99,7 +99,7 @@ class ItemDate extends ReportBuilder
      */
     public function asDOMDocument()
     {
-        $doc = new \DOMDocument();
+        $doc = new \DOMDocument('1.0', 'utf-8');
         $root = $doc->appendChild($doc->createElement('ItemDate'));
         $root->appendChild($doc->createElement('Type'))->appendChild($doc->createTextNode($this->type));
         $root->appendChild($doc->createElement('Value'))->appendChild($doc->createTextNode(date_format($this->value, 'Y-m-d')));

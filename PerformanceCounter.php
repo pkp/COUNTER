@@ -99,7 +99,7 @@ class PerformanceCounter extends ReportBuilder
      */
     public function asDOMDocument()
     {
-        $doc = new \DOMDocument();
+        $doc = new \DOMDocument('1.0', 'utf-8');
         $root = $doc->appendChild($doc->createElement('Instance'));
         $root->appendChild($doc->createElement('MetricType'))->appendChild($doc->createTextNode($this->metricType));
         $root->appendChild($doc->createElement('Count'))->appendChild($doc->createTextNode($this->count));
