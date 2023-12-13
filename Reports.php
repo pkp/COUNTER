@@ -113,7 +113,7 @@ class Reports extends ReportBuilder
      */
     public function asDOMDocument()
     {
-        $doc = new \DOMDocument();
+        $doc = new \DOMDocument('1.0', 'utf-8');
         $root = $doc->appendChild($doc->createElementNS(self::COUNTER_NAMESPACE, 'Reports'));
         $xmlns = $doc->createAttributeNS('http://www.w3.org/2001/XMLSchema-instance', 'xsi:schemaLocation');
         $xmlns->value = self::COUNTER_NAMESPACE . ' http://www.niso.org/schemas/sushi/counter4_1.xsd';

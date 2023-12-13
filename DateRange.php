@@ -94,7 +94,7 @@ class DateRange extends ReportBuilder
      */
     public function asDOMDocument()
     {
-        $doc = new \DOMDocument();
+        $doc = new \DOMDocument('1.0', 'utf-8');
         $root = $doc->appendChild($doc->createElement('Period'));
         $root->appendChild($doc->createElement('Begin'))->appendChild($doc->createTextNode(date_format($this->begin, 'Y-m-d')));
         $root->appendChild($doc->createElement('End'))->appendChild($doc->createTextNode(date_format($this->end, 'Y-m-d')));

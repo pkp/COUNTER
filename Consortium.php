@@ -101,7 +101,7 @@ class Consortium extends ReportBuilder
      */
     public function asDOMDocument()
     {
-        $doc = new \DOMDocument();
+        $doc = new \DOMDocument('1.0', 'utf-8');
         $root = $doc->appendChild($doc->createElement('Consortium'));
         if ($this->code) {
             $root->appendChild($doc->createElement('Code'))->appendChild($doc->createTextNode($this->code));

@@ -100,7 +100,7 @@ class Identifier extends ReportBuilder
      */
     public function asDOMDocument()
     {
-        $doc = new \DOMDocument();
+        $doc = new \DOMDocument('1.0', 'utf-8');
         $root = $doc->appendChild($doc->createElement('ItemIdentifier'));
         $root->appendChild($doc->createElement('Type'))->appendChild($doc->createTextNode($this->type));
         $root->appendChild($doc->createElement('Value'))->appendChild($doc->createTextNode($this->value));

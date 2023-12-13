@@ -121,7 +121,7 @@ class Contact extends ReportBuilder
      */
     public function asDOMDocument()
     {
-        $doc = new \DOMDocument();
+        $doc = new \DOMDocument('1.0', 'utf-8');
         $root = $doc->appendChild($doc->createElement('Contact'));
         if ($this->contact) {
             $root->appendChild($doc->createElement('Contact'))->appendChild($doc->createTextNode($this->contact));
